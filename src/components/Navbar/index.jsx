@@ -3,6 +3,8 @@ import styles from './index.module.css'
 import Searchbar from '../../widgets/searchbar'
 import brandlogo from '../../assets/vijay1.png'
 import Listitem from '../../widgets/Listitem'
+import Button from '../../widgets/Button'
+import { Link } from 'react-router-dom'
 const Navbar = ({ getlistname, listname }) => {
     return (
         <div className={styles.navcont}>
@@ -12,10 +14,12 @@ const Navbar = ({ getlistname, listname }) => {
             </div>
             <ul className=''>
                 <Listitem listname={listname} getlistname={getlistname} name="home"></Listitem>
-                <Listitem listname={listname} getlistname={getlistname} name="about"></Listitem>
-                <Listitem listname={listname} getlistname={getlistname} name="contact"></Listitem>
-                <Listitem listname={listname} getlistname={getlistname} name="services"></Listitem>
+                <Link to='/register'  > <Listitem getlistname={getlistname} name="register"></Listitem></Link>
+                <Link to="/login"><Listitem listname={listname} getlistname={getlistname} name="login"></Listitem></Link>
             </ul>
+            <div>
+                <Button name="SERVICES"></Button>
+            </div>
         </div>
     )
 }

@@ -3,12 +3,11 @@
     background-color: black;
     position: fixed;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    margin-bottom: 5px;
     padding: 0 5px;
     justify-content: space-around;
     box-shadow: 1px 2px 3px 0px rgb(240, 231, 231);
-
-
 }
 
 .navcont ul {
@@ -16,6 +15,7 @@
     width: 30%;
     list-style: none;
     justify-content: end;
+    font-weight: 900;
     padding: 15px;
     color: white;
     gap: 1.5rem;
@@ -52,14 +52,17 @@
     }
 
     .navcont ul {
-        width: 100%;
         font-size: medium;
         display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
         justify-content: start;
     }
 
     .searchbarcont {
         width: 100%;
+
+
 
     }
 

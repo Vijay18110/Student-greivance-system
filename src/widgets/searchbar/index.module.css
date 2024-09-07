@@ -1,16 +1,15 @@
 .searchbar {
     display: flex;
-    padding: 5px;
+    padding: 3px;
     justify-content: center;
     align-items: center;
 }
 
 .searchbar input {
     width: 100%;
-    padding: 14.5px;
+    padding: 12.5px;
     border-radius: 0 2rem 2rem 0;
     border: none;
-
     font-size: large;
     background-color: #fff;
     box-shadow: 1px 2px 3px 3px white;
@@ -29,7 +28,7 @@
 
 .iconcont {
     background-color: white;
-    padding: 16px;
+    padding: 14px;
     border-radius: 2rem 0 0 2rem;
     position: relative;
     box-shadow: 1px 2px 3px 3px white;

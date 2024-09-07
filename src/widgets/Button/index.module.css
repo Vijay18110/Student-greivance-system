@@ -1,0 +1,23 @@
+.btn {
+    width: 130px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #fff;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    align-items: center;
+    color: red;
+    border-radius: 2rem;
+    font-weight: 900;
+    font-size: medium;
+    transition: 1s;
+
+    &:hover {
+        background-color: blue;
+        border: blue;
+        box-shadow: 1px 1px 1px 1px blue;
+        color: #fff;
+    }
+}
