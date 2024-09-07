@@ -1,0 +1,73 @@
+.navcont {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    justify-content: space-around;
+    box-shadow: 1px 2px 3px 0px rgb(240, 231, 231);
+
+
+}
+
+.navcont ul {
+    display: flex;
+    width: 30%;
+    list-style: none;
+    justify-content: end;
+    padding: 15px;
+    color: white;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.searchbarcont {
+    width: 40%;
+}
+
+.logocont {
+    width: 10%;
+    height: 60px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    font-size: large;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.logocont img {
+    width: 100%;
+}
+
+@media screen and (max-width:700px) {
+    .navcont {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navcont ul {
+        width: 100%;
+        font-size: medium;
+        display: flex;
+        justify-content: start;
+    }
+
+    .searchbarcont {
+        width: 100%;
+
+    }
+
+    .logocont {
+        width: 200px;
+        height: 100px;
+        padding-left: 0px;
+        justify-self: start;
+
+    }
+}

@@ -1,0 +1,12 @@
+.maincont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(137, 138, 131);
+    color: red;
+    font-size: xx-large;
+    width: 100%;
+    height: 100vh;
+
+
+}
