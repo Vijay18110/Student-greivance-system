@@ -1,0 +1,70 @@
+.navcont {
+    width: 100%;
+
+    display: flex;
+
+    margin-bottom: 5px;
+
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+}
+
+.scont {
+    width: 100%;
+}
+
+.home {
+    color: red;
+    border-bottom: 1px solid white;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: white;
+    height: 0px;
+    width: 120px;
+    display: none;
+    color: rgb(110, 106, 106);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: .2s;
+
+}
+
+.dropdown div {
+    margin-bottom: 10px;
+
+    transition: 3s;
+    display: none;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: rgb(110, 106, 106);
+
+}
+
+.login:hover .dropdown {
+    height: 100px;
+    display: block;
+}
+
+.login:hover .dropdown div {
+    display: block;
+}
+
+.nav ul {
+    width: 80%;
+    justify-content: end;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: white;
+    font-weight: 900;
+}

@@ -1,0 +1,11 @@
+.addashcont {
+    display: flex;
+
+}
+
+@media screen and (max-width:600px) {
+    .addashcont {
+        display: flex;
+        flex-direction: column;
+    }
+}

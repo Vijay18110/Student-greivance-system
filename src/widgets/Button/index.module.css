@@ -1,23 +1,22 @@
 .btn {
     width: 130px;
     height: 50px;
-    background-color: #fff;
+    background: transparent;
     border: none;
-    box-shadow: 1px 1px 1px 1px #fff;
+    color: white;
+
     display: flex;
     justify-content: center;
     margin: 3px;
     align-items: center;
-    color: red;
     border-radius: 2rem;
     font-weight: 900;
     font-size: medium;
+    text-transform: uppercase;
     transition: 1s;
 
     &:hover {
-        background-color: blue;
-        border: blue;
-        box-shadow: 1px 1px 1px 1px blue;
-        color: #fff;
+
+        color: rgb(110, 101, 101);
     }
 }

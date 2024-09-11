@@ -1,0 +1,14 @@
+.dash {
+    width: 100%;
+    margin: 0 auto;
+
+
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    color: #0a6ff2;
+    text-transform: uppercase;
+    font-size: larger;
+    margin-bottom: 14px;
+}

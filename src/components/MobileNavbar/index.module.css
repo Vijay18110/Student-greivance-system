@@ -1,0 +1,81 @@
+.navcont {
+    width: 100%;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-bottom: 5px;
+    /* padding: 10px; */
+    align-items: center;
+}
+
+.logocont {
+    width: 40%;
+    height: 60px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    font-size: xx-large;
+    justify-content: start;
+    /* border-radius: 50%; */
+    align-items: center;
+}
+
+
+
+.logocont img {
+    width: 100%;
+    color: white;
+}
+
+.FaBars {
+    display: flex;
+    /* background-color: greenyellow; */
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+    width: 60%;
+    justify-content: end;
+    align-items: center;
+}
+
+/* .dropdown {
+    position: absolute;
+    background-color: white;
+    height: 0px;
+    width: 120px;
+    display: none;
+    color: rgb(110, 106, 106);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: .2s;
+
+} */
+
+/* .dropdown div {
+    margin-bottom: 10px;
+
+    transition: 3s;
+    display: none;
+} */
+
+/* .dropdown a {
+    text-decoration: none;
+    color: rgb(110, 106, 106);
+
+} */
+
+/* .login:hover .dropdown {
+    height: 100px;
+    display: block;
+} */
+
+/* .login:hover .dropdown div {
+    display: block;
+} */
+
+/* ul:nth-child(2):hover {
+
+} */

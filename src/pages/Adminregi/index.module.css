@@ -1,14 +1,15 @@
 .container {
-    background: url('../../assets/sr.jpg') no-repeat scroll;
+    background: url('../../assets/sr.jpg') no-repeat fixed;
     background-size: cover;
-    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
+
     align-items: center;
 }
 
 .formcont {
+    margin-top: 10px;
     padding: 2rem 3rem;
     /* background-color: rgb(17, 14, 14); */
     box-shadow: 0 0 10px #fff;
@@ -26,6 +27,11 @@
     width: 100%;
 }
 
+.form_group label {
+    font-weight: 900;
+}
+
+
 .form_controller {
     width: 100%;
     background-color: white;
@@ -37,10 +43,17 @@
 .form_controller input {
     width: 100%;
     border: none;
-    padding: 10px;
     font-size: large;
     padding: 20px;
 
+}
+
+.form_controller .select {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: large;
+    /* padding: 20px; */
 }
 
 .text {

@@ -1,0 +1,13 @@
+.cont {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #0972e3;
+}

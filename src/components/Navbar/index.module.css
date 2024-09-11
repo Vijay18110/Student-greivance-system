@@ -1,11 +1,12 @@
 .navcont {
     width: 100%;
-    background-color: black;
-    position: fixed;
+    background-color:
+        #0972e3;
+    height: 10vh;
     display: flex;
     /* flex-wrap: wrap; */
     margin-bottom: 5px;
-    padding: 0 5px;
+    padding: 10px;
     justify-content: space-around;
     box-shadow: 1px 2px 3px 0px rgb(240, 231, 231);
 }
@@ -25,25 +26,75 @@
 }
 
 
+
+
 .searchbarcont {
     width: 40%;
 }
 
 .logocont {
-    width: 10%;
+    width: 20%;
     height: 60px;
     color: white;
     padding: 10px;
     display: flex;
-    font-size: large;
+    font-size: xx-large;
     justify-content: center;
     border-radius: 50%;
     align-items: center;
 }
 
+.home {
+    color: #d41538;
+    border-bottom: 1px solid white;
+}
+
 .logocont img {
     width: 100%;
 }
+
+.dropdown {
+    position: absolute;
+    background-color: white;
+    height: 0px;
+    width: 120px;
+    display: none;
+    color: rgb(110, 106, 106);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: .2s;
+
+}
+
+.dropdown div {
+    margin-bottom: 10px;
+
+    transition: 3s;
+    display: none;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: rgb(110, 106, 106);
+
+}
+
+.login:hover .dropdown {
+    height: 100px;
+    display: block;
+}
+
+.login:hover .dropdown div {
+    display: block;
+}
+
+/* ul:nth-child(2):hover {
+
+} */
+
 
 @media screen and (max-width:700px) {
     .navcont {
