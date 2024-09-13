@@ -79,7 +79,8 @@ const Register = () => {
                 body: JSON.stringify({ name: name, email: email, password: password, rollno: rollno, department: department, branch: branch })
             })
             const data = await res.json();
-            navigate('/student/login', { replace: true, state: { name: name } })
+            localStorage.setItem("name", name)
+            navigate('/student/login', { replace: true })
 
         }
     }

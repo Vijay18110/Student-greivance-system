@@ -20,8 +20,9 @@ const Adminlog = () => {
         });
         const data = await r.json();
         if (data.msg === true) {
-            createcookie("admin")
+            localStorage.setItem("admin", id);
             navigate('/admin/dash', { replace: true })
+
 
 
         }

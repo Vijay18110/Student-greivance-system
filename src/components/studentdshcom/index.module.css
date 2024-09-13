@@ -17,6 +17,7 @@
     margin-bottom: 10px;
     font-size: larger;
     font-weight: 900;
+    text-transform: capitalize;
 }
 
 .x {

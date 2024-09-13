@@ -5,3 +5,14 @@ exports.savecompaints = async (req, res) => {
     await cm.save();
     res.json({ msg: "complaints send" });
 }
+exports.getcompaints = async (req, res) => {
+    const re = await cModel.find()
+    res.json(re);
+
+}
+exports.deletecom = async (req, res) => {
+    const re = await cModel.findOneAndDelete({ _id: req.body.id })
+    res.json({ msg: "complaint deleted" });
+
+
+}

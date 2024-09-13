@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './index.module.css'
 import Button from '../../widgets/Button'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
@@ -8,13 +8,16 @@ import { useCookies } from 'react-cookie'
 const Login = () => {
     const [rollno, setRollno] = useState("")
     const [password, setPassword] = useState("")
+    const [name, setName] = useState("");
     const [cookie, createcookie, removecookie] = useCookies();
-
     const navigate = useNavigate();
     const { state } = useLocation();
 
 
-    console.log(state)
+    useEffect(() => {
+        setName(localStorage.getItem("name"))
+    }, [])
+
     const login = async () => {
         const r = await fetch("http://localhost:3000/students", {
             method: "PATCH",
@@ -24,8 +27,10 @@ const Login = () => {
         const data = await r.json();
 
         if (data.msg === true) {
-            createcookie(["student"], state.name)
+
+            localStorage.setItem("loginname", name)
             navigate('/student/dash', { replace: true })
+
         }
         else {
             toast.error("please enter valid rollno or password", {

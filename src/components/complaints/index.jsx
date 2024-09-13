@@ -7,7 +7,7 @@ import 'react-toastify/ReactToastify.css'
 const Complaints = () => {
 
 
-    const [branches, setBranches] = useState(["computer science", "information technology", "artificial inteligence", "robotics", "machine learning", "mechanical", "electrical", "electronics", "biotechnology", "civil", "b-voc"])
+    const [branches, setBranches] = useState(["library", "acadmic", "canteen", "others"]);
     const [branch, setBranch] = useState("");
     const [name, setName] = useState("");
     const [uid, setUid] = useState("");
