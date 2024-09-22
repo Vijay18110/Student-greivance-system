@@ -23,11 +23,7 @@ const Adminlog = () => {
             navigate('/admin/dash', { replace: true })
         }
         else {
-            toast.error("enter valid id or password", {
-                position: 'bottom-right',
-                pauseOnHover: true,
-                autoClose: 8000
-            })
+            alert("check data base connetivity")
         }
 
     }
