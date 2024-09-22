@@ -10,7 +10,6 @@ const Comlist = (props) => {
     useEffect(() => {
         fetch('http://localhost:3000/complaints').then((res) => res.json()).then((res) => setComplaints(res))
         props.setNoOFCom(complaints.length)
-
     }, [complaints])
     const deletecom = async (id) => {
         const re = await fetch("http://localhost:3000/complaints", {
@@ -21,14 +20,6 @@ const Comlist = (props) => {
         const data = await re.json();
         alert(data.msg)
     }
-    const forwardfn = () => {
-        alert("complaints forwarded!")
-    }
-    const viewcom = (c, cn) => {
-        alert(c + cn)
-    }
-
-
     return (
         <>
             <div className={styles.dashcont}>
@@ -37,13 +28,13 @@ const Comlist = (props) => {
                         return (
                             <>
                                 <div className={styles.ulcont}>
-                                    <span ><span className={styles.sno} >{index + 1}</span></span>
+                                    <span ><span style={{ color: "white" }} className={styles.iconcont} >{index + 1}</span></span>
                                     <span className={styles.ui}> <span className={styles.username}>{complaint.name}</span><span>Uid :{complaint.uid}</span></span>
                                     <span ><span className={styles.comid}>{complaint._id}</span></span>
                                     <span className={styles.status}>{complaint.branch}</span>
                                     <span>{complaint.inchargename}</span>
                                     <span className={styles.action}>
-                                        <i onClick={() => props.click1(complaint.complaints, complaint.uid, 1)}><IoEyeOutline></IoEyeOutline></i><i onClick={() => { props.click1("", complaint.uid, 2) }}> <ImForward color='blue'></ImForward></i><i><MdDelete onClick={() => deletecom(complaint._id)} color='red'></MdDelete></i>
+                                        <i style={{ color: "white" }} className={styles.iconcont} onClick={() => props.click1(complaint.complaints, complaint.uid, 1)}><IoEyeOutline></IoEyeOutline></i><i className={styles.iconcont} onClick={() => { props.click1("", complaint.uid, 2) }}> <ImForward color='blue'></ImForward></i><i className={styles.iconcont}  ><MdDelete onClick={() => deletecom(complaint._id)} color='red'></MdDelete></i>
                                     </span>
                                 </div>
                                 <ToastContainer></ToastContainer>

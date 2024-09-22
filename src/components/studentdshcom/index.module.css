@@ -5,6 +5,7 @@
     border: 1px;
     width: 30%;
     /* height: 86vh; */
+    min-width: 320px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;

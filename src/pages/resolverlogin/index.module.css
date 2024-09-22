@@ -3,15 +3,14 @@
     background-size: cover;
     height: 100vh;
     width: 100%;
-    min-width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .formcont {
-    padding: 1rem 2rem;
-    background-color: rgb(17, 14, 14);
+    padding: 2rem 3rem;
+    /* background-color: rgb(17, 14, 14); */
     box-shadow: 0 0 10px #fff;
     width: 50%;
     margin-bottom: 1rem;
@@ -55,16 +54,4 @@
 
 .text a {
     text-decoration: none;
-}
-
-@media screen and (max-width:600px) and (min-width:320px) {
-    .formcont {
-        padding: .5rem 1rem;
-        width: 280px;
-        height: 400px;
-    }
-
-    .form_group {
-        width: 100%;
-    }
 }

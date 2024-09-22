@@ -14,5 +14,9 @@ exports.deletecom = async (req, res) => {
     const re = await cModel.findOneAndDelete({ _id: req.body.id })
     res.json({ msg: "complaint deleted" });
 
+}
+
+exports.updatecom = async (req, res) => {
+    const re = await cModel.findOneAndUpdate({ uid: req.body.userid }, { adminfwd: "true" })
 
 }

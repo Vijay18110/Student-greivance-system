@@ -13,9 +13,7 @@ const Navbar = () => {
     const setwidth = () => {
         setWidth1(() => window.innerWidth);
     }
-
     window.addEventListener('resize', setwidth)
-
     return (
         <div id="nav" className={styles.navcont}>
             {width1 >= 700 ? <>     <div className={styles.logocont}><a to="#"><img src={brandlogo} alt="" /> </a></div>
@@ -23,7 +21,7 @@ const Navbar = () => {
                     <Searchbar></Searchbar>
                 </div>
                 <ul className=''>
-                    <li className={pathname === "/home" ? styles.home : ""}>home</li>
+                    <Link to="/home"><li className={pathname === "/home" ? styles.home : ""}>home</li></Link>
                     <li className={styles.login}>login
                         <div className={styles.dropdown}>
                             <Link to="/student/login">
@@ -35,9 +33,10 @@ const Navbar = () => {
                                     <hr />
                                 </div>
                             </Link>
-                            <div> resolver
+                            <Link to="/resolver/login"><div> resolver
                                 <hr />
                             </div>
+                            </Link>
                         </div>
                     </li>
                 </ul>
@@ -47,10 +46,6 @@ const Navbar = () => {
             </> :
                 <Mobilenavbar></Mobilenavbar>
             }
-
-
-
-
         </div>
     )
 }

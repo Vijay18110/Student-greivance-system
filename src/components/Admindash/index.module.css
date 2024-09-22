@@ -5,7 +5,9 @@
     border: 1px;
     width: 30%;
     height: 100vh;
+    min-width: 400px;
     margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }

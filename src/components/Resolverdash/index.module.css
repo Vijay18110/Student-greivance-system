@@ -3,12 +3,9 @@
     border-radius: 10px;
     box-shadow: 13px 3px 25px -16px gray;
     border: 1px;
-    width: 70%;
-    height: 100vh;
-    min-width: 400px;
+    width: 25%;
     margin-top: 20px;
     display: flex;
-    overflow: scroll;
     flex-direction: column;
 }
 
@@ -16,37 +13,17 @@
     width: 100%;
     display: flex;
     gap: 20px;
-    padding: .5rem;
     align-items: center;
     justify-content: space-around;
-    background: #333;
-    margin-top: 30px;
+    background-image: url('../../assets/sr.jpg');
+
+    margin-top: 15px;
     font-size: larger;
     box-shadow: 0 0 10px #dacbcb;
-    animation: rotate 1s linear 1;
-}
+    transition: 1s;
 
-.iconcont {
-    width: 35px;
-    height: 35px;
-    background-color: #333;
-
-    box-shadow: 0 0 5px white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-    font-weight: bold;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotateX(0deg);
-    }
-
-    to {
-        transform: rotateX(360deg);
+    &&:hover {
+        transform: scale(1.15);
     }
 }
 
@@ -59,7 +36,7 @@
 }
 
 .username {
-    color: white;
+    color: black;
     font-size: larger;
     font-weight: 700;
 }
@@ -99,7 +76,7 @@
 .action {
     width: 90px;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     font-size: larger;
 }
 

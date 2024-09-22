@@ -24,54 +24,36 @@ const Register = () => {
         autoClose: 8000,
     }
 
-    const handlevalidation = async () => {
-
-
-
+    const handlevalidation = () => {
         if (name === "") {
             toast.error("fill name field", toastobj)
             return false;
         }
-        if (email === "") {
+        else if (email === "") {
             toast.error("fill email field", toastobj)
             return false;
-        } if (password === "") {
+        }
+        else if (password === "") {
             toast.error("fill password field", toastobj)
             return false;
-        } if (branch === "") {
+        }
+        else if (branch === "") {
             toast.error("select your branch  ", toastobj)
             return false;
-        } if (department === "") {
+        }
+        else if (department === "") {
             toast.error("select your  department", toastobj)
             return false;
         }
-        if (rollno === "") {
-            toast.error("fill rollno field", toastobj)
+        else if (rollno === "") {
+            toast.error("fill rollno field", toastobj);
             return false;
         }
 
-
-
-
-
-
-
-
-
         else return true;
-
     }
-
-
-
-
-
     const submitdata = async (e) => {
-
-
-
         if (handlevalidation()) {
-
 
             const res = await fetch("http://localhost:3000/students", {
                 method: "POST",
@@ -80,8 +62,7 @@ const Register = () => {
             })
             const data = await res.json();
             localStorage.setItem("name", name)
-            navigate('/student/login', { replace: true })
-
+            navigate('/student/dash')
         }
     }
     return (

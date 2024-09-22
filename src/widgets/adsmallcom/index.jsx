@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './index.module.css'
-const Adsmcom = () => {
+const Adsmcom = ({ dash }) => {
     return (
-        <div className={styles.cont}>admin dash</div>
+        <div className={styles.cont}>{dash}</div>
     )
 }
 export default Adsmcom;

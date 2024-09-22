@@ -6,15 +6,18 @@
     display: flex;
     /* flex-wrap: wrap; */
     margin-bottom: 5px;
-    padding: 10px;
-    justify-content: space-around;
+    margin-right: 10px;
+    /* padding: 30px; */
+    min-width: 400px;
     align-items: center;
+    /* justify-content: ; */
     box-shadow: 1px 2px 3px 0px rgb(240, 231, 231);
 }
 
 .navcont ul {
     display: flex;
-    width: 30%;
+    width: 60%;
+    min-width: 300px;
     list-style: none;
     justify-content: end;
     font-weight: 900;
@@ -34,8 +37,10 @@
 }
 
 .logocont {
-    width: 20%;
+    width: 25%;
     height: 60px;
+    min-width: 100px;
+    min-width: 100px;
     color: white;
     padding: 10px;
     display: flex;
@@ -45,11 +50,8 @@
     align-items: center;
 }
 
-a {
-    border-bottom: 1px solid white;
-    text-decoration: none;
-    color: red;
-}
+
+
 
 .logocont img {
     width: 100%;
@@ -57,43 +59,44 @@ a {
 
 .dropdown {
     position: absolute;
-    color: white;
+    background-color: white;
     height: 0px;
     width: 120px;
     display: none;
-    background: rgb(110, 106, 106);
-    /* border-radius: 1rem; */
+    color: rgb(110, 106, 106);
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: .2s;
-    right: 120px;
-    right: 120px;
 
 }
 
 .dropdown div {
     margin-bottom: 10px;
+
     transition: 3s;
     display: none;
 }
 
 .dropdown a {
     text-decoration: none;
-    color: white;
+    color: rgb(110, 106, 106);
 
 }
 
 .login:hover .dropdown {
     height: 100px;
     display: block;
-    right: 120px;
-
 }
 
 .login:hover .dropdown div {
     display: block;
+}
+
+.ul {
+    width: 70%;
 }
 
 /* ul:nth-child(2):hover {
@@ -101,7 +104,7 @@ a {
 } */
 
 
-@media screen and (max-width:700px) {
+/* @media screen and (max-width:700px) {
     .navcont {
         flex-direction: column;
         width: 100%;
@@ -129,4 +132,4 @@ a {
         justify-self: start;
 
     }
-}
+} */

@@ -13,6 +13,10 @@
 
 }
 
+.content {
+    padding-right: 20px;
+}
+
 .content:first-child {
     text-transform: capitalize;
 }

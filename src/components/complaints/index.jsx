@@ -42,13 +42,11 @@ const Complaints = () => {
     }
     const submitdata = async (e) => {
         const cid = Math.floor(Math.random() * 10000000000)
-
-
         if (handlevalidation()) {
             const res = await fetch("http://localhost:3000/complaints", {
                 method: "POST",
                 headers: { "Content-Type": "Application/json" },
-                body: JSON.stringify({ complaintsId: cid, name: name, uid: uid, complaints: complaints, inchargename: inchargename, branch: branch })
+                body: JSON.stringify({ complaintsId: cid, name: name, uid: uid, complaints: complaints, inchargename: inchargename, branch: branch, adminfwd: "false", adminview: "false", resolverview: "false", adminstatus: "pendnig", resolverstatus: "pending" })
             })
             const data = await res.json();
             console.log(data)

@@ -1,11 +1,10 @@
 .dashcont {
-    padding: 0rem 3rem;
+    padding: 0rem 1rem;
     border-radius: 10px;
     box-shadow: 13px 3px 25px -16px gray;
     border: 1px;
-    width: 70%;
+    width: 75%;
     height: 100vh;
-    min-width: 400px;
     margin-top: 20px;
     display: flex;
     overflow: scroll;
@@ -16,28 +15,18 @@
     width: 100%;
     display: flex;
     gap: 20px;
-    padding: .5rem;
     align-items: center;
     justify-content: space-around;
-    background: #333;
-    margin-top: 30px;
+    /* background-image: ; */
+    margin-top: 15px;
     font-size: larger;
-    box-shadow: 0 0 10px #dacbcb;
-    animation: rotate 1s linear 1;
-}
+    box-shadow: 0 0 10px #9c9090;
+    transition: 1s;
+    animation: rotate 1s linear 1 forwards;
 
-.iconcont {
-    width: 35px;
-    height: 35px;
-    background-color: #333;
-
-    box-shadow: 0 0 5px white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-    font-weight: bold;
+    &&:hover {
+        transform: scale(1.06);
+    }
 }
 
 @keyframes rotate {
@@ -47,7 +36,9 @@
 
     to {
         transform: rotateX(360deg);
+
     }
+
 }
 
 .dashcont::-webkit-scrollbar {
@@ -59,7 +50,7 @@
 }
 
 .username {
-    color: white;
+    color: black;
     font-size: larger;
     font-weight: 700;
 }
@@ -71,12 +62,12 @@
     justify-content: center;
     margin: 10px;
     padding: 10px;
-    background-color: rgba(174, 179, 168, 0.877);
+    background-color: rgba(45, 46, 44, 0.877);
     font-size: larger;
-    color: rgb(29, 31, 29);
+    color: #fff;
     font-weight: 900;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
 
 
 }
@@ -99,7 +90,7 @@
 .action {
     width: 90px;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     font-size: larger;
 }
 
@@ -121,5 +112,18 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+    }
+}
+
+@media screen and (max-width:380) {
+
+
+    .ulcont {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2px;
     }
 }

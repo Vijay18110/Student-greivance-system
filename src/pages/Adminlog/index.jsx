@@ -5,7 +5,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
 import { useCookies } from 'react-cookie'
-
 const Adminlog = () => {
     const [id, setid] = useState("")
     const [password, setPassword] = useState("")
@@ -22,9 +21,6 @@ const Adminlog = () => {
         if (data.msg === true) {
             localStorage.setItem("admin", id);
             navigate('/admin/dash', { replace: true })
-
-
-
         }
         else {
             toast.error("enter valid id or password", {

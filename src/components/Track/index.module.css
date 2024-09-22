@@ -4,7 +4,7 @@
     box-shadow: 13px 3px 25px -16px gray;
     border: 1px;
     width: 33%;
-
+    min-width: 320px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;

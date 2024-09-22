@@ -1,26 +1,28 @@
 .container {
+    background: url('../../assets/sr.jpg') no-repeat fixed;
     background-size: cover;
-    width: 40%;
-    min-width: 320px;
-
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    box-shadow: 13px 3px 25px -16px gray;
+
     align-items: center;
 }
 
 .formcont {
     margin-top: 10px;
     padding: 2rem 3rem;
+    /* background-color: rgb(17, 14, 14); */
     box-shadow: 0 0 10px #fff;
-    width: 100%;
+    width: 50%;
     margin-bottom: 1rem;
+    margin: 0 auto;
     border-radius: 1rem;
 }
 
 .form_group {
     display: flex;
-    /* color: white; */
+    color: white;
     flex-direction: column;
     margin-bottom: 5px;
     font-size: xx-large;
@@ -44,22 +46,8 @@
     width: 100%;
     border: none;
     font-size: large;
-    background-color: white;
-    box-shadow: 0 0 10px rgb(146, 144, 144);
     padding: 20px;
-    margin-top: 10px;
 
-}
-
-.textarea {
-    width: 100%;
-    border: none;
-    font-size: large;
-    background-color: white;
-    box-shadow: 0 0 10px rgb(146, 144, 144);
-
-    padding: 20px;
-    margin-top: 10px;
 }
 
 .form_controller .select {
@@ -68,8 +56,6 @@
     padding: 15px;
     font-size: large;
     /* padding: 20px; */
-    background-color: #9c9892;
-
 }
 
 .text {
@@ -84,15 +70,8 @@
     text-decoration: none;
 }
 
-@media screen and (max-width:1100px) and (min-width:600px) {
-    .container {
-        width: 40%;
-
-    }
-}
-
-@media screen and (max-width:600px) {
-    .container {
-        width: 100%;
+@media screen and (max-width:700px) {
+    .formcont {
+        width: 400px;
     }
 }
