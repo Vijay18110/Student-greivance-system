@@ -1,0 +1,34 @@
+.cardcont {
+    display: flex;
+    padding: 1rem 2rem;
+    font-weight: 300px;
+    text-align: center;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    color: black;
+    border: 1px black;
+    margin: 20px;
+    transition: 1s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.cardcont img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:590px) {
+    .cardcont {
+        width: 300px;
+    }
+}

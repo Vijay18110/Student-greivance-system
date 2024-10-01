@@ -18,5 +18,10 @@ exports.deletecom = async (req, res) => {
 
 exports.updatecom = async (req, res) => {
     const re = await cModel.findOneAndUpdate({ uid: req.body.userid }, { adminfwd: "true" })
+}
+exports.getsomedata = async (req, res) => {
+    const re = await cModel.find({ name: "Vijay raj" })
+
+    res.json(re);
 
 }

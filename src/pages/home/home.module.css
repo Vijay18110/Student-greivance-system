@@ -1,0 +1,29 @@
+.cardcont {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    column-gap: 15px;
+
+}
+
+@media screen and (max-width:830px) {
+    .cardcont {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-width:830px) and (min-width:700px) {
+    .cardcont {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:702px) {
+    .cardcont {
+        flex-wrap: wrap;
+        margin-top: 400px;
+    }
+}

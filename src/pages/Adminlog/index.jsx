@@ -4,13 +4,10 @@ import Button from '../../widgets/Button'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
-import { useCookies } from 'react-cookie'
 const Adminlog = () => {
     const [id, setid] = useState("")
     const [password, setPassword] = useState("")
-    const [cookie, createcookie, removecookie] = useCookies();
     const navigate = useNavigate();
-    // const toastobj=
     const login = async () => {
         const r = await fetch("http://localhost:3000/admin", {
             method: "PATCH",
@@ -23,15 +20,17 @@ const Adminlog = () => {
             navigate('/admin/dash', { replace: true })
         }
         else {
-            alert("check data base connetivity")
+            toast.error("enter valid id or password", {
+                position: 'bottom-right',
+                pauseOnHover: true,
+                autoClose: 8000
+            })
         }
-
     }
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.formcont}>
-
                     <div className={styles.form_group}>
                         <label htmlFor="email"> id</label>
                         <div className={styles.form_controller}>
@@ -40,7 +39,6 @@ const Adminlog = () => {
                     </div>
                     <div className={styles.form_group}>
                         <label htmlFor="password"> password</label>
-
                         <div className={styles.form_controller}>
                             <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder='enter password' name="" id="password" />
                         </div>
@@ -53,5 +51,4 @@ const Adminlog = () => {
         </>
     )
 }
-
 export default Adminlog

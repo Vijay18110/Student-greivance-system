@@ -12,12 +12,11 @@ const Login = () => {
     const [cookie, createcookie, removecookie] = useCookies();
     const navigate = useNavigate();
     const { state } = useLocation();
-
-
+    const [students, setStudents] = useState([]);
     useEffect(() => {
-        setName(localStorage.getItem("name"))
-    }, [])
+        fetch("http://localhost:3000/students").then((res) => res.json()).then((res) => setStudents(res));
 
+    }, [])
     const login = async () => {
         const r = await fetch("http://localhost:3000/students", {
             method: "PATCH",
@@ -27,7 +26,9 @@ const Login = () => {
         const data = await r.json();
         if (data.msg === true) {
 
-            localStorage.setItem("loginname", name);
+            localStorage.setItem("loginkey", rollno);
+            const filltereduser = students.filter((stu) => stu.rollno == rollno)
+            localStorage.setItem("name", filltereduser[0].name);
             navigate('/student/dash', { replace: true });
 
         }

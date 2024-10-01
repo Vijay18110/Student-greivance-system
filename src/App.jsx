@@ -6,14 +6,16 @@ import Adminlog from './pages/Adminlog/index.jsx'
 import Adminregi from './pages/Adminregi/index.jsx'
 import Studentdash from './pages/studentsdash/index.jsx'
 import Admindash from './pages/admindash/index.jsx'
-import Home from './pages/Home.jsx'
+import Home from './pages/home/Home.jsx'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Resolver from './pages/Resolver/index.jsx'
 import Resoverlogin from './pages/resolverlogin/index.jsx'
 import Resoverregister from './pages/resolverregister/index.jsx'
+import Container from './components/container/index.jsx'
 function App() {
   return (
     <>
+
       <Routes>
         <Route path='/' element={<Navigate to="/home" />} />
         <Route path='/home' element=<Home></Home> />

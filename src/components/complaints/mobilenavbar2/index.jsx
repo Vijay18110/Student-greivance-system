@@ -18,7 +18,7 @@ const Mobilenavbar2 = () => {
     }
     return (
         <>
-            <div id="nav" className={className}>
+            <div style={{ zIndex: "10" }} id="nav" className={className}>
                 <div style={{ width: "100%", display: "flex", justifyContent: "end", marginRight: "20px" }}>
                     <div style={{ color: "red", display: "flex", justifyContent: "center", fontSize: "100px", width: "50px", height: "50px", borderRadius: "50%", boxShadow: "0 0 10px black" }} className={styles.FaBars}><span onClick={(e) => toggle(e)}>X</span></div>
                 </div>

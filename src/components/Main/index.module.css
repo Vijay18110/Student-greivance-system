@@ -13,6 +13,14 @@
 
 }
 
+.comcont {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 20px auto;
+    background-color: yellow;
+}
+
 .content {
     padding-right: 20px;
 }
@@ -22,38 +30,32 @@
 }
 
 .maincont .content {
-    font-size: x-large;
+    font-size: 16px;
     padding-left: 30px;
-    /*  */
     color: #0972e3;
-
-    /* font-weight: 800; */
-    ;
 }
 
 .p2 {
     margin: 10px 0px;
 
-    font-weight: 200;
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
-
-
-    color: rgb(75, 70, 70);
+    color: #7e7e7e;
 }
 
 .p2 p {
-
     text-align: justify;
+    color: #7e7e7e;
 
 }
 
 .p2 p span {
     color: black;
     font-weight: 900;
+    color: #7e7e7e;
 
 }
 
@@ -72,8 +74,7 @@
 
 @media screen and (max-width:700px) {
     .maincont {
-        font-size: small;
-
+        font-size: 16px;
     }
 
     .maincont {
@@ -85,6 +86,5 @@
         margin-top: 100px;
         width: 100%;
         height: 500px;
-
     }
 }

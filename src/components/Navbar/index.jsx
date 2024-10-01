@@ -7,6 +7,7 @@ import Button from '../../widgets/Button'
 
 import { Link, useLocation } from 'react-router-dom'
 import Mobilenavbar from '../MobileNavbar'
+import Container from '../container'
 const Navbar = () => {
     const { pathname } = useLocation()
     const [width1, setWidth1] = useState(window.innerWidth);
@@ -15,38 +16,40 @@ const Navbar = () => {
     }
     window.addEventListener('resize', setwidth)
     return (
-        <div id="nav" className={styles.navcont}>
-            {width1 >= 700 ? <>     <div className={styles.logocont}><a to="#"><img src={brandlogo} alt="" /> </a></div>
-                <div className={styles.searchbarcont} >
-                    <Searchbar></Searchbar>
-                </div>
-                <ul className=''>
-                    <Link to="/home"><li className={pathname === "/home" ? styles.home : ""}>home</li></Link>
-                    <li className={styles.login}>login
-                        <div className={styles.dropdown}>
-                            <Link to="/student/login">
-                                <div> student
-                                    <hr /></div>
-                            </Link>
-                            <Link to='/admin/login'>
-                                <div> admin
+        <>
+            <div id="nav" className={styles.navcont}>
+                {width1 >= 700 ? <>     <div className={styles.logocont}><a to="#"><img src={brandlogo} alt="" /> </a></div>
+                    <div className={styles.searchbarcont}>
+                        <Searchbar></Searchbar>
+                    </div>
+                    <ul className=''>
+                        <Link to="/home"><li className={pathname === "/home" ? styles.home : ""}>home</li></Link>
+                        <li className={styles.login}>login
+                            <div className={styles.dropdown}>
+                                <Link to="/student/login">
+                                    <div> student
+                                        <hr /></div>
+                                </Link>
+                                <Link to='/admin/login'>
+                                    <div> admin
+                                        <hr />
+                                    </div>
+                                </Link>
+                                <Link to="/resolver/login"><div> resolver
                                     <hr />
                                 </div>
-                            </Link>
-                            <Link to="/resolver/login"><div> resolver
-                                <hr />
+                                </Link>
                             </div>
-                            </Link>
-                        </div>
-                    </li>
-                </ul>
-                <div>
-                    <Button boxShadow="#222420" colorname="#222420" name="services" ></Button>
-                </div>
-            </> :
-                <Mobilenavbar></Mobilenavbar>
-            }
-        </div>
+                        </li>
+                    </ul>
+                    <div>
+                        <Button boxShadow="#222420" colorname="#222420" name="services" ></Button>
+                    </div>
+                </> :
+                    <Mobilenavbar></Mobilenavbar>
+                }
+            </div>
+        </>
     )
 }
 

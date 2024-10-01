@@ -16,6 +16,8 @@
     gap: 10px;
 }
 
+
+
 @media screen and (max-width:1100px) and (min-width:600px) {
     .dashcont {
         flex-wrap: wrap;
@@ -45,48 +47,108 @@
 
 .absolutecont {
     position: absolute;
-    width: 50%;
+    width: 80%;
     background-image: linear-gradient(to left, rgb(245, 255, 255), rgb(240, 245, 231), rgb(227, 243, 227));
     /* background-image: url('../../assets/sr.jpg');
     background-size: cover; */
-    height: 400px;
-    left: 300px;
-    top: 180px;
     display: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    margin: 100px auto;
+
 }
 
 .absolutecont1 {
     position: absolute;
-    width: 50%;
-    background-image: linear-gradient(to left, rgb(245, 255, 255), rgb(240, 245, 231), rgb(227, 243, 227));
-    animation: ro .5s linear;
+    width: 80%;
+    background-image: linear-gradient(to left, rgb(139, 197, 197), rgb(240, 245, 231), rgb(227, 243, 227));
+    animation: ro .1s linear;
     display: block;
-    height: 400px;
-    left: 300px;
-    top: 180px;
+    /* height: 200px; */
+
     border-radius: 10px;
+    padding: 2rem 3rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    margin: 100px auto;
+    margin-left: 70px;
+
 }
 
 @keyframes ro {
     from {
-        top: 0px;
+
+        top: 0;
     }
 
     to {
-
-        width: 50%;
-        height: 400px;
+        top: 100px;
+        padding: 2rem 3rem;
         border-radius: 10px;
+        margin: auto;
+        margin-left: 100px;
     }
+
 
 }
 
 .absolute {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: end;
+    color: black;
+    /* margin-top: 20px; */
+    gap: 20px;
+    filter: drop-shadow(100%);
     align-items: center;
+}
+
+
+
+.absolutecontview {
+    position: absolute;
+    width: 80%;
+    background-image: linear-gradient(to left, rgb(245, 255, 255), rgb(240, 245, 231), rgb(227, 243, 227));
+    /* background-image: url('../../assets/sr.jpg');
+    background-size: cover; */
+    display: none;
+    border-radius: 10px;
+    margin: 100px auto;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+
+.absolutecontview1 {
+    position: absolute;
+    width: 80%;
+    background-image: linear-gradient(to left, rgb(139, 197, 197), rgb(240, 245, 231), rgb(227, 243, 227));
+    animation: ro .1s linear;
+    display: block;
+    /* height: 200px; */
+
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    margin: 100px auto;
+
+    margin-left: 50px;
+
+    margin-top: -50px;
+}
+
+@keyframes ro {
+    from {
+
+        top: -100px;
+    }
+
+    to {
+        top: -10px;
+        padding: 2rem 3rem;
+
+        margin: auto;
+        margin-left: 100px;
+        border-radius: 10px;
+    }
+
 }
