@@ -6,6 +6,7 @@ import Navbaradmin from '../../components/navbaradmin'
 import Resolverdash from '../../components/Resolverdash'
 import Resolvernavbar from '../../components/resolvernav'
 import ResolverComlist from '../../components/resolvercomlist'
+import Container from '../../components/container'
 const Resolver = () => {
     const navigate = useNavigate()
     useEffect(() => {
@@ -28,7 +29,7 @@ const Resolver = () => {
         setClassname(styles.absolutecont1)
     }
     return (
-        <>
+        <Container>
             <div className={styles.admindashcont}>
                 <Resolvernavbar />
                 <div className={styles.addashcont}>
@@ -45,7 +46,7 @@ const Resolver = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </Container>
     )
 }
 export default Resolver

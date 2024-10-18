@@ -5,6 +5,7 @@ import Admindashcom from '../../components/Admindash'
 import Comlist from '../../components/Admindashcomlaintslist'
 import { useNavigate } from 'react-router-dom'
 import Navbaradmin from '../../components/navbaradmin'
+import Container from '../../components/container'
 const Admindash = () => {
     const navigate = useNavigate()
     const [updatedcom, setupdatedcom] = useState([]);
@@ -58,8 +59,7 @@ const Admindash = () => {
         setupdatedcom(data);
     }
     return (
-        <>
-
+        <Container>
             <div className={styles.admindashcont}>
                 <Navbaradmin />
                 <div className={className}>
@@ -78,7 +78,7 @@ const Admindash = () => {
                     <Comlist click1={click1} setNoOFCom={setNoOFCom}></Comlist>
                 </div>
             </div>
-        </>
+        </Container>
     )
 }
 

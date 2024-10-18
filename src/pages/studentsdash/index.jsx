@@ -5,9 +5,8 @@ import logo from '../../assets/srimtf.png'
 import Complaints from '../../components/complaints'
 import Track from '../../components/Track'
 import { IoEyeOutline } from "react-icons/io5";
-
 import { useNavigate } from 'react-router-dom'
-import Animation from '../amimatedpage'
+import Container from '../../components/container'
 const Studentdash = () => {
     const navigate = useNavigate();
     const [complaints, setComplaints] = useState([]);
@@ -48,17 +47,9 @@ const Studentdash = () => {
         setViewcom(complaints)
     }
     const display = useRef(null);
-    // useEffect(() => {
-    //     display.current.style.display = "block"
-    // }, [])
-    return (<>
+    return (<Container>
+
         <div className={styles.studashcont}>
-            {/*
-            <div style={{ display: "none", position: "absolute" }} ref={display}>
-                <div className={styles.absolute}>
-                    <Animation></Animation>
-                    <div className={styles.delete} onClick={click2} colorname="red"> X </div>
-                </div></div> */}
             <img src={logo} alt="" />
         </div>
         <div className={className1}>
@@ -123,7 +114,7 @@ const Studentdash = () => {
             <Complaints inref={inref}></Complaints>
             <Track click={click} ></Track>
         </div>
-    </>
+    </Container>
     )
 }
 export default Studentdash;

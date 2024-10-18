@@ -7,7 +7,8 @@ import img1 from '../../assets/card/hands.png'
 import img2 from '../../assets/card/complaints.jpeg'
 import img3 from '../../assets/card/complaintsmain.jpeg'
 import img4 from '../../assets/card/complaintssol.jpeg'
-import Container from '../../components/container';
+import Container from '../../components/container'
+import Footer from '../Footer'
 const Home = () => {
     return (
         <>
@@ -21,6 +22,7 @@ const Home = () => {
                 <Card img={img3}></Card>
                 <Card img={img4}> </Card>
             </div>
+            <Footer />
         </>
     )
 }

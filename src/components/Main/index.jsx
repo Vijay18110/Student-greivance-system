@@ -26,16 +26,13 @@ const Main = () => {
                             <p>
                                 <span>  2. *Review*</span>: The grievance is reviewed by a committee or designated officer to determine its validity and the appropriate course of action.
                             </p>
-
                             <p>
                                 <span>3. *Resolution*</span>: The college takes steps to resolve the grievance, which may include mediation, disciplinary actions, or other remedies.
                             </p>
                             <p>
-
                                 <span>4. *Follow-up*</span>: The system often includes mechanisms to ensure that the resolution is effective and to address any further concerns.
                             </p>
                             <p className={styles.last}>
-
                                 Colleges usually have specific policies and procedures outlined in their student or employee handbooks to guide this process.
                             </p>
                         </p>

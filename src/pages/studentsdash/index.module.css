@@ -1,5 +1,6 @@
 .studashcont {
     width: 100%;
+    max-width: 1610px;
     background-color: #fff;
     border-bottom: 1px solid rgb(112, 110, 110);
 }
@@ -60,6 +61,7 @@
 
 .absolutecont1 {
     position: absolute;
+    z-index: 10;
     width: 80%;
     background-image: linear-gradient(to left, rgb(139, 197, 197), rgb(240, 245, 231), rgb(227, 243, 227));
     animation: ro .1s linear;

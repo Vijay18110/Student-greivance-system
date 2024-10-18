@@ -4,6 +4,7 @@ import Button from '../../widgets/Button'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
+import Container from '../../components/container'
 const Resoverlogin = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -30,7 +31,7 @@ const Resoverlogin = () => {
         }
     }
     return (
-        <>
+        <Container>
             <div className={styles.container}>
                 <div className={styles.formcont}>
                     <div className={styles.form_group}>
@@ -50,7 +51,7 @@ const Resoverlogin = () => {
                 </div>
             </div>
             <ToastContainer></ToastContainer>
-        </>
+        </Container>
     )
 }
 

@@ -4,6 +4,7 @@ import Button from '../../widgets/Button'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
+import Container from '../../components/container'
 const Adminlog = () => {
     const [id, setid] = useState("")
     const [password, setPassword] = useState("")
@@ -28,7 +29,7 @@ const Adminlog = () => {
         }
     }
     return (
-        <>
+        <Container >
             <div className={styles.container}>
                 <div className={styles.formcont}>
                     <div className={styles.form_group}>
@@ -48,7 +49,7 @@ const Adminlog = () => {
                 </div>
             </div>
             <ToastContainer></ToastContainer>
-        </>
+        </Container>
     )
 }
 export default Adminlog

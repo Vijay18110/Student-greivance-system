@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
 import { useCookies } from 'react-cookie'
+import Container from '../../components/container'
 const Login = () => {
     const [rollno, setRollno] = useState("")
     const [password, setPassword] = useState("")
@@ -41,7 +42,7 @@ const Login = () => {
         }
     }
     return (
-        <>
+        <Container>
             <div className={styles.container}>
                 <div className={styles.formcont}>
                     <div className={styles.form_group}>
@@ -62,7 +63,7 @@ const Login = () => {
                 </div>
             </div>
             <ToastContainer></ToastContainer>
-        </>
+        </Container>
     )
 }
 
