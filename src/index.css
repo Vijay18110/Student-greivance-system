@@ -123,9 +123,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+/* body {
     margin: 0;
     place-items: center;
-    min-width: 20px;
+    width: 100%;
+    /* min-width: 20px; */
     min-height: 100vh;
-}
+} */
