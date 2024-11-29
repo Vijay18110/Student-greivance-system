@@ -4,13 +4,9 @@ import { IoIosSearch } from "react-icons/io";
 const Searchbar = () => {
     return (
         <div className={styles.searchbar}>
-            <div className={styles.iconcont}>
-
-                <IoIosSearch></IoIosSearch>
-            </div>
+            <IoIosSearch color={"black"} size={30}></IoIosSearch>
             <input type="text" placeholder='type for search' />
         </div>
     )
 }
-
-export default Searchbar
+export default Searchbar;

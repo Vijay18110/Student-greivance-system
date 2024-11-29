@@ -1,42 +1,27 @@
 .searchbar {
     display: flex;
-    padding: 3px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+column-gap: 20px;
+    border-radius:8px;
+padding-left: 10px;
+background-color:white;
+
 }
 
 .searchbar input {
     width: 100%;
-    padding: 12.5px;
-    border-radius: 0 2rem 2rem 0;
+    padding: 10px;
+    border-radius:8px;
     border: none;
     font-size: large;
-    background-color: #fff;
-    box-shadow: 1px 2px 3px 3px white;
+padding-left: 0px;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 *:focus {
     outline: none;
-
-
-
-}
-
-.iconcont {
-    background-color: white;
-    padding: 14px;
-    border-radius: 2rem 0 0 2rem;
-    position: relative;
-    box-shadow: 1px 2px 3px 3px white;
-
-    left: 1.4px;
-    margin-left: 0;
-    font-size: large;
-    display: flex;
-    justify-content: end;
-    align-items: center;
 }

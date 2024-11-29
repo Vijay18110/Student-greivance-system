@@ -55,12 +55,12 @@ a {
 
 .dropdown {
     position: absolute;
-    color: white;
-    height: 0px;
-    width: 120px;
+    color: rgb(3, 3, 3);
+border-radius: 8px;
+    width: 200px;
     display: none;
-    background: rgb(110, 106, 106);
-    /* border-radius: 1rem; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,22 +76,23 @@ a {
     transition: 3s;
     display: none;
 }
-
 .dropdown a {
     text-decoration: none;
-    color: white;
-
+    color: black;
 }
-
 .login:hover .dropdown {
-    height: 100px;
-    display: block;
+    height: 120px;
+    display: flex;
     right: 120px;
-
+align-self: center;
+row-gap: 10px;
+padding: 10px 10px;
+padding-bottom: 20px;
 }
 
 .login:hover .dropdown div {
     display: block;
+
 }
 
 /* ul:nth-child(2):hover {
