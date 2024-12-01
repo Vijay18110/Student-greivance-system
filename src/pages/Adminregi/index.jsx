@@ -47,15 +47,13 @@ const Adminregi = () => {
 
 
         if (handlevalidation()) {
-            const res = await fetch("http://localhost:3000/admin", {
+            const res = await fetch("https://grievance-system-f1fa6-default-rtdb.firebaseio.com/admindata.json", {
                 method: "POST",
                 headers: { "Content-Type": "Application/json" },
                 body: JSON.stringify({ name: name, email: email, password: password, id: id, position: position })
             })
             const data = await res.json();
-            alert(data.msg)
-            navigate("/admin/login", { replace: true })
-
+            navigate("/admin/login", { replace: true, state: data });
         }
     }
     return (

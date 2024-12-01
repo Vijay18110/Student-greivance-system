@@ -33,15 +33,13 @@ const Resoverregister = () => {
     }
     const submitdata = async (e) => {
         if (handlevalidation()) {
-            const res = await fetch("http://localhost:3000/resolver", {
+            const res = await fetch("https://grievance-system-f1fa6-default-rtdb.firebaseio.com/resolver.json", {
                 method: "POST",
                 headers: { "Content-Type": "Application/json" },
                 body: JSON.stringify({ name: name, email: email, password: password })
             })
-            const data = await res.json();
-            localStorage.setItem("resolver", name)
-            navigate('/resolver/login', { replace: true })
-
+            localStorage.setItem("resolvername", name);
+            navigate('/resolver/login', { replace: true });
         }
     }
     return (

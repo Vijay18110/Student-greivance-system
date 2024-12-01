@@ -10,16 +10,18 @@ const Resoverlogin = () => {
     const [password, setPassword] = useState("")
     const navigate = useNavigate();
     const login = async () => {
-
-        const r = await fetch("http://localhost:3000/resolver", {
-            method: "PATCH",
+        const r = await fetch("https://grievance-system-f1fa6-default-rtdb.firebaseio.com/resolver.json", {
+            method: "GET",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ email: email, password: password })
         });
-
         const data = await r.json();
-        if (data.msg === true) {
-            localStorage.setItem("resolveremail", email)
+        const d = [];
+        for (const x in data) {
+            d.push(data[x]);
+        }
+        const filtereddata = d.find((d) => d.email === email && d.password === password);
+        if (filtereddata) {
+            localStorage.setItem("resolver", email)
             navigate('/resolver', { replace: true })
         }
         else {

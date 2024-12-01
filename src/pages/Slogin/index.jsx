@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
 import { useCookies } from 'react-cookie'
 import Container from '../../components/container'
+import Swal from 'sweetalert2'
 const Login = () => {
     const [rollno, setRollno] = useState("")
     const [password, setPassword] = useState("")
@@ -19,19 +20,24 @@ const Login = () => {
 
     }, [])
     const login = async () => {
-        const r = await fetch("http://localhost:3000/students", {
-            method: "PATCH",
+        const r = await fetch("https://grievance-system-f1fa6-default-rtdb.firebaseio.com/studentdata.json", {
+            method: "GET",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ rollno: rollno, password: password })
         });
         const data = await r.json();
-        if (data.msg === true) {
-
-            localStorage.setItem("loginkey", rollno);
-            const filltereduser = students.filter((stu) => stu.rollno == rollno)
-            localStorage.setItem("name", filltereduser[0].name);
-            navigate('/student/dash', { replace: true });
-
+        if (data) {
+            const d = [];
+            for (const ele in data) {
+                d.push(data[ele]);
+            }
+            const filltereduser = d.find((stu) => stu.rollno === rollno && stu.password === password)
+            if (filltereduser) {
+                localStorage.setItem("token", filltereduser.rollno);
+                navigate('/student/dash', { replace: true, state: filltereduser.name });
+            }
+            else {
+                Swal.fire("Please enter valid data!");
+            }
         }
         else {
             toast.error("please enter valid rollno or password", {

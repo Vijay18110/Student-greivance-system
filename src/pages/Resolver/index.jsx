@@ -10,8 +10,8 @@ import Container from '../../components/container'
 const Resolver = () => {
     const navigate = useNavigate()
     useEffect(() => {
-        if (!localStorage.getItem("resolveremail")) {
-            navigate('/resolver/login')
+        if (!localStorage.getItem("resolver")) {
+            navigate('/resolver/login');
         }
     }, []);
     const [noofcom, setNoOFCom] = useState(0);

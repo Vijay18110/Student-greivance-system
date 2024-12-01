@@ -4,11 +4,10 @@ import Main from '../../components/Main'
 import Card from '../../components/Card'
 import styles from './home.module.css';
 import img1 from '../../assets/card/hands.png'
-import img2 from '../../assets/card/complaints.jpeg'
-import img3 from '../../assets/card/complaintsmain.jpeg'
-import img4 from '../../assets/card/complaintssol.jpeg'
-import Container from '../../components/container'
-import Footer from '../Footer'
+import img2 from '../../assets/card/complaints.jpeg';
+import img3 from '../../assets/card/complaintsmain.jpeg';
+import img4 from '../../assets/card/complaintssol.jpeg';
+import Footer from '../Footer';
 const Home = () => {
     return (
         <>
@@ -26,5 +25,4 @@ const Home = () => {
         </>
     )
 }
-
-export default Home
+export default Home;

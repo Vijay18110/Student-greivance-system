@@ -17,7 +17,7 @@ const Resolvernavbar = () => {
         Navigate('/home');
     }
     const logoutresolver = () => {
-        localStorage.removeItem("resolveremail")
+        localStorage.removeItem("resolver")
         Navigate('/home')
     }
     return (

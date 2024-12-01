@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './index.module.css'
 import Button from '../../widgets/Button'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
 import Container from '../../components/container'
@@ -10,21 +10,19 @@ const Register = () => {
     }, [])
     const [departments, setDepartments] = useState(["B.tech", "M.tech", "MBA", "d-pharma(ayurved)"]);
     const [branches, setBranches] = useState(["computer science", "information technology", "artificial inteligence", "robotics", "machine learning", "mechanical", "electrical", "electronics", "biotechnology", "civil", "b-voc"])
-    const [branch, setBranch] = useState("")
-    const [name, setName] = useState("")
-    const [rollno, setRollno] = useState("")
-    const [email, setEmail] = useState("")
-    const [department, setDepartment] = useState("")
-    const [password, setPassword] = useState("")
-    const [sdata, setSdata] = useState([])
-
-    const navigate = useNavigate()
+    const [branch, setBranch] = useState("");
+    const [name, setName] = useState("");
+    const [rollno, setRollno] = useState("");
+    const [email, setEmail] = useState("");
+    const [department, setDepartment] = useState("");
+    const [password, setPassword] = useState("");
+    const [sdata, setSdata] = useState([]);
+    const navigate = useNavigate();
     const toastobj = {
         position: 'bottom-right',
         pauseOnHover: true,
         autoClose: 8000,
     }
-
     const handlevalidation = () => {
         if (name === "") {
             toast.error("fill name field", toastobj)
@@ -55,15 +53,11 @@ const Register = () => {
     }
     const submitdata = async (e) => {
         if (handlevalidation()) {
-
-            const res = await fetch("http://localhost:3000/students", {
+            // http://localhost:3000/students
+            const res = await fetch("https://grievance-system-f1fa6-default-rtdb.firebaseio.com/studentdata.json", {
                 method: "POST",
-                headers: { "Content-Type": "Application/json" },
                 body: JSON.stringify({ name: name, email: email, password: password, rollno: rollno, department: department, branch: branch })
-            })
-            const data = await res.json();
-            localStorage.setItem("name", name)
-            navigate('/student/dash')
+            });
         }
     }
     return (

@@ -1,26 +1,31 @@
 import React, { useState } from 'react'
 import styles from './index.module.css'
 import Button from '../../widgets/Button'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/ReactToastify.css'
 import Container from '../../components/container'
 const Adminlog = () => {
+    const { state } = useLocation();
     const [id, setid] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate();
     const login = async () => {
-        const r = await fetch("http://localhost:3000/admin", {
-            method: "PATCH",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({ id: id, password: password })
+        const r = await fetch("https://grievance-system-f1fa6-default-rtdb.firebaseio.com/admindata.json", {
+            method: "GET",
         });
         const data = await r.json();
-        if (data.msg === true) {
-            localStorage.setItem("admin", id);
-            navigate('/admin/dash', { replace: true })
+        const d = [];
+        for (const x in data) {
+            d.push(data[x]);
+        }
+        const filtereddata = d.find((it) => it.id === id && it.password === password);
+        if (filtereddata) {
+            localStorage.setItem("admin", filtereddata.id);
+            navigate('/admin/dash', { replace: true });
         }
         else {
+            console.log(state)
             toast.error("enter valid id or password", {
                 position: 'bottom-right',
                 pauseOnHover: true,
